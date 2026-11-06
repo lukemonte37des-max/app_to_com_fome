@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5ed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px #00000012;
+}
+
+.logo {
+  color: #ff6500;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.container > p {
+  color: #777;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.campo input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6500;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e65b00;
+}
+
+.alternativa {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.alternativa a {
+  color: #ff6500;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.voltar {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #777;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.oculto {
+  display: none;
+}
+
+#mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}

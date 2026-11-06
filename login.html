@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login | Tô com Fome</title>
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo">🍔 Tô com Fome</div>
+
+      <h1 id="titulo">Bem-vindo de volta!</h1>
+
+      <p id="subtitulo">Entre na sua conta para fazer seus pedidos.</p>
+
+      <form id="formulario">
+        <div id="campoNome" class="campo oculto">
+          <label>Nome completo</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" />
+        </div>
+
+        <div class="campo">
+          <label>E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label>Senha</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+
+        <button type="submit" id="botao">Entrar</button>
+      </form>
+
+      <p class="alternativa" id="alternativa">
+        Ainda não tem uma conta?
+        <a href="#" id="trocar">Cadastre-se</a>
+      </p>
+
+      <a href="index.html" class="voltar"> ← Voltar para o início </a>
+
+      <p id="mensagem"></p>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

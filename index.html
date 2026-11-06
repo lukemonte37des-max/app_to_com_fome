@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tô com Fome | Delivery</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">🍔 Tô com Fome</div>
+
+      <div class="localizacao">
+        <span>📍 Entregar em</span>
+        <strong>Minha localização ▼</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <h1>Bateu aquela fome?</h1>
+        <p>Peça sua comida favorita sem sair de casa!</p>
+      </section>
+
+      <section class="pesquisa">
+        <input
+          type="text"
+          id="campoPesquisa"
+          placeholder="🔍 Buscar restaurantes ou comidas..."
+        />
+      </section>
+
+      <section class="categorias">
+        <h2>Categorias</h2>
+
+        <div class="lista-categorias">
+          <div class="categoria">
+            <span>🍔</span>
+            <p>Hambúrguer</p>
+          </div>
+
+          <div class="categoria">
+            <span>🍕</span>
+            <p>Pizza</p>
+          </div>
+
+          <div class="categoria">
+            <span>🍣</span>
+            <p>Japonesa</p>
+          </div>
+
+          <div class="categoria">
+            <span>🍰</span>
+            <p>Doces</p>
+          </div>
+
+          <div class="categoria">
+            <span>🥤</span>
+            <p>Bebidas</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurantes">
+        <h2>Restaurantes populares</h2>
+
+        <div class="lista-restaurantes" id="listaRestaurantes">
+          <article class="card-restaurante">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700"
+              alt="Hambúrguer"
+            />
+
+            <div class="info-restaurante">
+              <h3>Burger House</h3>
+              <p>🍔 Hambúrguer • ⭐ 4.8</p>
+              <span>30-40 min • R$ 5,00 entrega</span>
+            </div>
+          </article>
+
+          <article class="card-restaurante">
+            <img
+              src="https://images.unsplash.com/photo-157 pizza"
+              alt="Pizza"
+            />
+
+            <div class="info-restaurante">
+              <h3>Pizza Mania</h3>
+              <p>🍕 Pizzaria • ⭐ 4.9</p>
+              <span>35-50 min • R$ 7,00 entrega</span>
+            </div>
+          </article>
+
+          <article class="card-restaurante">
+            <img
+              src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=700"
+              alt="Comida japonesa"
+            />
+
+            <div class="info-restaurante">
+              <h3>Temaki Express</h3>
+              <p>🍣 Japonesa • ⭐ 4.7</p>
+              <span>40-50 min • R$ 6,00 entrega</span>
+            </div>
+          </article>
+        </div>
+
+        <p id="mensagemVazia" class="mensagem-vazia">
+          Nenhum restaurante encontrado.
+        </p>
+      </section>
+    </main>
+
+    <nav class="menu-inferior">
+      <a href="#" class="ativo">🏠<span>Início</span></a>
+      <a href="#">🔍<span>Buscar</span></a>
+      <a href="#">❤️<span>Favoritos</span></a>
+      <a href="#">👤<span>Perfil</span></a>
+      <a href="login.html">
+        👤
+        <span>Entrar</span>
+      </a>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
