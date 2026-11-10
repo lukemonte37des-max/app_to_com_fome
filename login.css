@@ -1,108 +1,237 @@
+/* =================================
+   TÔ COM FOME APP - LOGIN
+   Design moderno e responsivo
+================================= */
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CONFIGURAÇÕES GERAIS */
 body {
-  font-family: Arial, sans-serif;
-  background: #fff5ed;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #fff7f0, #ffe3cc);
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px;
+  color: #333;
 }
 
+/* CONTAINER PRINCIPAL */
 .container {
-  background: white;
+  background: #ffffff;
   width: 100%;
-  max-width: 420px;
-  padding: 35px;
-  border-radius: 18px;
-  box-shadow: 0 5px 25px #00000012;
+  max-width: 430px;
+  padding: 40px 35px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  animation: aparecer 0.7s ease;
 }
 
+/* LOGO */
 .logo {
-  color: #ff6500;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
-  text-align: center;
+  color: #ff6b00;
   margin-bottom: 30px;
 }
 
+/* TÍTULO */
 h1 {
-  font-size: 25px;
-  margin-bottom: 10px;
+  font-size: 27px;
+  color: #292929;
+  margin-bottom: 12px;
 }
 
-.container > p {
+/* SUBTÍTULO */
+#subtitulo {
   color: #777;
-  margin-bottom: 25px;
   font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
 }
 
+/* CAMPOS */
 .campo {
-  display: flex;
-  flex-direction: column;
+  text-align: left;
   margin-bottom: 20px;
 }
 
 .campo label {
+  display: block;
+  font-size: 14px;
   font-weight: bold;
+  color: #444;
   margin-bottom: 8px;
 }
 
 .campo input {
+  width: 100%;
   padding: 14px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #fafafa;
+  transition: 0.3s;
 }
 
+/* EFEITO AO CLICAR NO CAMPO */
+.campo input:focus {
+  border-color: #ff6b00;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.12);
+}
+
+/* BOTÃO */
 button {
   width: 100%;
   padding: 15px;
-  border: none;
-  border-radius: 8px;
-  background: #ff6500;
+  background: #ff6b00;
   color: white;
+  border: none;
+  border-radius: 12px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
 }
 
+/* EFEITO DO BOTÃO */
 button:hover {
-  background: #e65b00;
+  background: #e85f00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.25);
 }
 
+button:active {
+  transform: scale(0.98);
+}
+
+/* ALTERNATIVA LOGIN / CADASTRO */
 .alternativa {
-  text-align: center;
-  margin-top: 22px;
   font-size: 14px;
+  color: #666;
+  margin-top: 25px;
 }
 
 .alternativa a {
-  color: #ff6500;
+  color: #ff6b00;
   font-weight: bold;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+.alternativa a:hover {
+  color: #d95300;
+  text-decoration: underline;
+}
+
+/* LINK VOLTAR */
 .voltar {
-  display: block;
-  text-align: center;
+  display: inline-block;
   margin-top: 25px;
   color: #777;
+  font-size: 13px;
   text-decoration: none;
-  font-size: 14px;
+  transition: 0.3s;
 }
 
+.voltar:hover {
+  color: #ff6b00;
+}
+
+/* MENSAGENS */
+#mensagem {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e53935;
+}
+
+/* CAMPO OCULTO */
 .oculto {
   display: none;
 }
 
-#mensagem {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 14px;
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ANIMAÇÃO DOS CAMPOS */
+.campo {
+  animation: surgir 0.5s ease;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* RESPONSIVIDADE - CELULAR */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  #subtitulo {
+    font-size: 13px;
+  }
+
+  .campo input {
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
